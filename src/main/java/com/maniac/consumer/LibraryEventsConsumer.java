@@ -11,7 +11,7 @@ public class LibraryEventsConsumer {
 
     @KafkaListener(topics = {"library-events"})
     public void onMessage(ConsumerRecord<Integer, String> consumerRecord) {
-        log.info("ConsumerRecord : {}", consumerRecord);
+        log.info("Current thread: '{}', " + "ConsumerRecord : {}", Thread.currentThread().getName(), consumerRecord);
 
     }
 }

@@ -1,9 +1,10 @@
 package com.maniac.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.annotation.EnableKafka;
 
 @Configuration
-//@EnableKafka //only needed for older spring version
+@EnableKafka
 public class LibraryEventsConsumerConfig {
 
 }
